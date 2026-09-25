@@ -1,0 +1,60 @@
+{
+  "project": {
+    "id": 6,
+    "name": "New Proj",
+    "description": "",
+    "uuid": "704719"
+  },
+  "collection": {
+    "id": 12,
+    "name": "User Details API Collection 1",
+    "description": "",
+    "source_type": "postman",
+    "environments": [
+      "QA"
+    ],
+    "endpoint_count": 108
+  },
+  "environment": "QA",
+  "rules": [
+    {
+      "id": 14,
+      "metric": "Response Time",
+      "operator": ">",
+      "unit": "ms",
+      "severity": "error",
+      "value": "500"
+    },
+    {
+      "id": 15,
+      "metric": "Error Rate",
+      "operator": ">",
+      "unit": "%",
+      "severity": "error",
+      "value": "2"
+    }
+  ],
+  "test_plans": [
+    {
+      "id": 10,
+      "name": "User Details Load Test",
+      "engine": "jmeter",
+      "test_type": "load",
+      "vusers": 5,
+      "rampup": 5,
+      "iter_mode": "duration",
+      "loops": 1,
+      "duration": 60,
+      "status": "pending"
+    }
+  ],
+  "config": {
+    "urls": [
+      {
+        "protocol": "https",
+        "url": "dummyjson.com",
+        "port": "443"
+      }
+    ]
+  }
+}
